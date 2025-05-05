@@ -3,68 +3,37 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Dashboard</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            background-color: #f5f5f5;
-        }
-        .container {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            max-width: 600px;
-            margin: auto;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #333;
-        }
-        .token-box {
-            word-wrap: break-word;
-            background-color: #f9f9f9;
-            padding: 10px;
-            border: 1px solid #ddd;
-            margin-top: 20px;
-        }
-        button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #d9534f;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-    </style>
+    <title>Gestion des Utilisateurs - Pharmacie</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"/>
+
+    <!-- Lien vers CSS externe -->
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
+
 <body>
 
 <div class="container">
-    <h1>Bienvenue sur votre Dashboard</h1>
-    <p>Vous êtes connecté(e) avec succès.</p>
 
-    <h2>Votre Token JWT :</h2>
-    <div id="token-display" class="token-box">Aucun token trouvé. Veuillez vous reconnecter.</div>
-
-    <button onclick="logout()">Se déconnecter</button>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <img src="assets/img/logo.jpg" alt="Logo">
+        </div>
+        <ul class="menu">
+            <ul class="menu">
+                <li><a href="${pageContext.request.contextPath}/dashbord.jsp"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="${pageContext.request.contextPath}/Utilisateur.jsp"><i class="fas fa-users"></i> Utilisateurs</a></li>
+                <li><a href="${pageContext.request.contextPath}/Fournisseur.jsp"><i class="fas fa-users"></i> Fournisseur</a></li>
+                <li><a href="${pageContext.request.contextPath}/Medicament.jsp"><i class="fas fa-pills"></i> Medicament</a></li>
+            </ul>
+        </ul>
+    </div>
 </div>
-
-<script>
-    // Récupérer le token depuis localStorage
-    const token = localStorage.getItem('authToken');
-
-    if (token) {
-        document.getElementById('token-display').textContent = token;
-    }
-
-    function logout() {
-        localStorage.removeItem('authToken'); // Supprimer le token
-        alert("Vous avez été déconnecté(e).");
-        window.location.href = 'index.jsp'; // Rediriger vers la page d'accueil
-    }
-</script>
-
 </body>
 </html>
