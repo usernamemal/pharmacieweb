@@ -384,6 +384,7 @@
             <li><a href="Utilisateur.jsp" class="active"><i class="fas fa-users"></i> Utilisateurs</a></li>
             <li><a href="Fournisseur.jsp"><i class="fas fa-users"></i> Fournisseur</a></li>
             <li><a href="Medicament.jsp"><i class="fas fa-pills"></i> Medicament</a></li>
+            <li><a href="bon_de_commande.jsp"><i class="fas fa-shopping-cart"></i> Bon de Commande</a></li>
             <li><a href="#" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Déconnexion</a></li>
         </ul>
     </div>

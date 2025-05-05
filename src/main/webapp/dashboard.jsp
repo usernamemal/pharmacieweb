@@ -31,6 +31,7 @@
                 <li><a href="${pageContext.request.contextPath}/Utilisateur.jsp"><i class="fas fa-users"></i> Utilisateurs</a></li>
                 <li><a href="${pageContext.request.contextPath}/Fournisseur.jsp"><i class="fas fa-users"></i> Fournisseur</a></li>
                 <li><a href="${pageContext.request.contextPath}/Medicament.jsp"><i class="fas fa-pills"></i> Medicament</a></li>
+                <li><a href="${pageContext.request.contextPath}/bon_de_commande.jsp"><i class="fas fa-shopping-cart"></i> Bon de Commande</a></li>
             </ul>
         </ul>
     </div>
